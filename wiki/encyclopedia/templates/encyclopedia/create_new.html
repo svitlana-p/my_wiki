@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<h3> Enter the title and text of the new article </h3>
+<form action="{% url 'enc:create' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <p><input type="submit" value="Send"></p>
+</form>
+<p><a href="{% url 'enc:index' %}"> Home page </a></p>
+
+{% endblock %}

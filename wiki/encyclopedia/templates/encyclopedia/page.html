@@ -4,3 +4,13 @@
 Encyclopedia
 {% endblock %}
 
+{% block body %}
+
+{{ content|safe }}
+
+
+<p><a href="{% url 'enc:edit'%}"> Edit </a></p>
+
+<p><a href="{% url 'enc:index' %}"> Home page </a></p>
+
+{% endblock %}
