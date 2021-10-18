@@ -6,11 +6,11 @@ Encyclopedia
 
 {% block body %}
 <h3> Enter the title and text of the new article </h3>
-<form action="{% url 'enc:create' %}" method="post">
+<form action="{% url 'wikipedia:create' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <p><input type="submit" value="Send"></p>
 </form>
-<p><a href="{% url 'enc:index' %}"> Home page </a></p>
+<p><a href="{% url 'wikipedia:index' %}"> Home page </a></p>
 
 {% endblock %}
